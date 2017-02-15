@@ -11,6 +11,18 @@
  * - The object creation is heavy on memory and it can be time consuming too.
  * - The object properties can be divided into intrinsic and extrinsic properties,
  *   extrinsic properties of an Object should be defined by the client program.
- *   TODO: TO BE CONTINUE...
+ *
+ *
+ * To apply flyweight pattern, we need to divide Object property into intrinsic and extrinsic properties.
+ * Intrinsic properties make the Object unique whereas extrinsic properties are set by client code and used
+ * to perform different operations.
+ * For example, an Object Circle can have extrinsic properties such as color and width.
+ *
+ * For applying flyweight pattern, we need to create a Flyweight factory that returns the shared objects.
+ * For our example, lets say we need to create a drawing with lines and Ovals.
+ * So we will have an interface Shape and its concrete implementations as Line and Oval.
+ * Oval class will have intrinsic property to determine whether to fill the Oval with given color or not
+ * whereas Line will not have any intrinsic property.
+ *
  */
 package Structural.Flyweight;
